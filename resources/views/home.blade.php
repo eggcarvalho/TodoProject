@@ -18,9 +18,14 @@
     @include('modals.add')
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center flex-column flex-wrap vh-100 gap-5">
-            <div class="col-md-3">
+            <div class="col-md-3 d-flex flex-column gap-4">
                 <a href="{{ route('home') }}">
                     <img src="{{ asset('asset/images/logo.png') }}" alt="" class="img-fluid">
+                </a>
+                <a href="#"
+                    type="button"
+                    class="btn btn-outline-danger btn-sm">
+                    <i class="bi bi-person-badge"></i> Gerenciar Responsável
                 </a>
             </div>
             <div class=" col-md-9">
@@ -57,21 +62,21 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     <div class="row">
-                                        <div class="col-md-6 d-flex align-items-center">
+                                        <div class="col-md-5 d-flex align-items-center">
                                             Responsável:
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-7 ps-1">
                                             <select
                                                 class="form-select"
                                                 name="resp">
-                                                <option selected>Joãozinho</option>
+                                                <option selected>Joãozinho | Faxineiro</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-4">
                                     <div class="row">
                                         <div class="col-md-3 d-flex align-items-center">
                                             Situação:
@@ -141,7 +146,7 @@
                                     <tr>
                                         <td>1</td>
                                         <td>Varrer o Chão</td>
-                                        <td>Juninho</td>
+                                        <td>Juninho | Faxineiro</td>
                                         <td>
                                             <button
                                                 type="button"
@@ -168,7 +173,7 @@
                                     <tr>
                                         <td>1</td>
                                         <td>Varrer o Chão</td>
-                                        <td>Pedrinho</td>
+                                        <td>Pedrinho | Jardineiro</td>
                                         <td>
                                             <button
                                                 type="button"

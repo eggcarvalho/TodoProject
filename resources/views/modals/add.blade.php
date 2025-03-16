@@ -120,7 +120,7 @@
                     data-bs-dismiss="modal">
                     Fechar
                 </button>
-                <button type="button" class="btn btn-success btn-sm">Salvar</button>
+                <button type="button" class="btn btn-success btn-sm">Cadastrar</button>
             </div>
         </div>
     </div>

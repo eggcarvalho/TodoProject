@@ -9,4 +9,10 @@ class Task extends Model
 {
     /** @use HasFactory<\Database\Factories\TaskFactory> */
     use HasFactory;
+
+
+    public function responsible()
+    {
+        return $this->belongsTo(Responsible::class);
+    }
 }

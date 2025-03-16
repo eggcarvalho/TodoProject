@@ -19,7 +19,7 @@ class ResponsibleFactory extends Factory
         $faker = \Faker\Factory::create('pt_BR');
 
         return [
-            'name' => $faker->name(),
+            'name' => $faker->firstName() . ' ' . $faker->lastName(),
             'function' => $faker->randomElement(['Jardineiro', 'Faxineiro', 'Desenvolvedor', 'Gerente', 'Analista', 'Designer']),
         ];
     }

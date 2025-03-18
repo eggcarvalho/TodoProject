@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\List;
+namespace App\Http\Controllers\Task;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Services\List\RegisterTaskService;
+use App\Services\Task\RegisterTaskService;
 
 class RegisterTaskController extends Controller
 {

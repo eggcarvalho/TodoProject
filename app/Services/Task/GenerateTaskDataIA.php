@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\List;
+namespace App\Services\Task;
 
 use App\Services\Gemini\GetIAJsonTaskActivityService;
 use App\Services\Services;

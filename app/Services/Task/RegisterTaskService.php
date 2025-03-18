@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Services\List;
+namespace App\Services\Task;
 
 use App\Models\Task;
-use App\Services\Gemini\GetIAJsonTaskActivityService;
 use Illuminate\Http\Request;
 
 class RegisterTaskService

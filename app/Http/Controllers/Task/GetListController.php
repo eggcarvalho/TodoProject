@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\List;
+namespace App\Http\Controllers\Task;
 
 use App\Http\Controllers\Controller;
-use App\Services\Gemini\GetIAJsonTaskActivityService;
-use App\Services\List\GetListTaskService;
+use App\Services\Task\GetListTaskService;
 use App\Services\Responsibles\GetListResponsibleService;
-use Illuminate\Http\Request;
 
 class GetListController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\List;
+namespace App\Services\Task;
 
 use App\Models\Task;
 use App\Services\Services;

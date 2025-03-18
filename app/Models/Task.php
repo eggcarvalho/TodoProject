@@ -10,6 +10,17 @@ class Task extends Model
     /** @use HasFactory<\Database\Factories\TaskFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'responsible_id',
+        'title',
+        'description',
+        'status',
+        'ia_manager',
+        'ia_path',
+        'priority',
+        'deadline'
+    ];
+
 
     public function responsible()
     {

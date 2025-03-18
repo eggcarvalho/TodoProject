@@ -18,7 +18,7 @@
                     <tr>
                         <th scope="col">Número</th>
                         <th scope="col">Título</th>
-                        <th scope="col">Responsável</th>
+                        <th scope="col">Responsável | Função</th>
                         <th scope="col">Ações</th>
 
                     </tr>

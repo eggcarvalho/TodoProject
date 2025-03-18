@@ -29,6 +29,32 @@
                         @include('components.search')
                     </div>
                 </div>
+                @error('error')
+                <div
+                    class="alert alert-danger alert-dismissible fade show"
+                    role="alert">
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"></button>
+                    <div class="row">
+                        <div class="col-12">
+                            {{ $message }}
+                        </div>
+                    </div>
+                </div>
+                @enderror
+
+                @if (session('success'))
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                        </div>
+                    </div>
+                </div>
+                @endif
                 <div class="row mt-4">
                     <div class="col-12">
                         @include('components.table')

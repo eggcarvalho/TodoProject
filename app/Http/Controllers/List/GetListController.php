@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\List;
 
 use App\Http\Controllers\Controller;
+use App\Services\Gemini\GetIAJsonTaskActivityService;
 use App\Services\List\GetListTaskService;
 use App\Services\Responsibles\GetListResponsibleService;
 use Illuminate\Http\Request;

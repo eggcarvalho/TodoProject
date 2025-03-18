@@ -40,6 +40,7 @@
                             <select
                                 class="form-select"
                                 name="resp">
+                                <option disabled selected value="">Selecionar</option>
                                 @forelse ($responsibles as $responsible)
                                 <option value="{{ $responsible->id }}">{{ $responsible->name . ' | ' . $responsible->function }}</option>
                                 @empty

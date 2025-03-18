@@ -19,6 +19,7 @@
                         <th scope="col">Número</th>
                         <th scope="col">Título</th>
                         <th scope="col">Responsável | Função</th>
+                        <th scope="col">IA?</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
@@ -28,6 +29,15 @@
                         <td>{{ $task->id }}</td>
                         <td>{{ $task->title }}</td>
                         <td>{{ $task->responsible->name }} | {{ $task->responsible->function }}</td>
+                        <td>
+                            @if($task->ia_manager)
+                            <span
+                                class="badge bg-primary"><i class="bi bi-android2"></i> Sim</span>
+                            @else
+                            <span
+                                class="badge bg-info">Não</span>
+                            @endif
+                        </td>
                         <td>
                             <div class="row">
                                 <div class="col-3">
@@ -68,7 +78,7 @@
                     @empty
                     <tr>
                         <td colspan="4">
-                            Não há tarefas cadastradas nesse sistema.
+                            Não há tarefas cadastradas no sistema.
                         </td>
                     </tr>
                     @endforelse

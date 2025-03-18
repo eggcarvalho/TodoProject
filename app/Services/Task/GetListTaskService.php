@@ -23,6 +23,9 @@ class GetListTaskService extends Services
             });
         }
 
+        if ($data['status'] === null) {
+            $tasks = $tasks->where('status', 'in-progress');
+        }
 
         $tasks = $tasks->orderBy('id', 'asc')->paginate(7);
 

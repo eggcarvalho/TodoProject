@@ -63,7 +63,10 @@ jQuery(function ($) {
 
         if (step == 1) $(".backButton").hide();
         if (step === 2) $(".nextButton").hide();
-        if (step == 3) $(".submitButton").show();
+        if (step == 3) {
+            $(".submitButton").show();
+            $(".add-footer").slideDown("fast");
+        }
     }
 
     function validateStep(step) {
@@ -106,7 +109,8 @@ jQuery(function ($) {
                 chooseStep(5);
             },
             error: (error) => {
-                console.error(error);
+                chooseStep(3);
+                console.error(error.responseText);
             },
         });
     }

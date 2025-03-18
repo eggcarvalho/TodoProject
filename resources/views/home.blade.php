@@ -22,6 +22,7 @@
 
 <body>
     @include('modals.add')
+    @include('components.detail')
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center flex-column flex-wrap vh-100 gap-5">
             <div class="col-md-11">
@@ -77,7 +78,6 @@
     <script src="{{ asset('asset/js/popper.min.js') }}"></script>
     <script src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('asset/js/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('asset/js/script.js') }}"></script>
     @stack('footer')
 </body>
 

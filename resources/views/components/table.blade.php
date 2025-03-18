@@ -43,7 +43,8 @@
                                 <div class="col-2">
                                     <button
                                         type="button"
-                                        class="btn btn-primary btn-sm">
+                                        class="btn btn-primary btn-sm see-detail"
+                                        data-taskid="{{ $task->id }}">
                                         <i class="bi bi-eye"></i>
                                     </button>
                                 </div>
@@ -88,3 +89,8 @@
 
     </div>
 </div>
+
+
+@push('footer')
+<script src="{{ asset('asset/js/detail-modal.js') }}"></script>
+@endpush

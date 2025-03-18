@@ -160,3 +160,7 @@
         </div>
     </div>
 </form>
+
+@push('footer')
+<script src="{{ asset('asset/js/add-modal.js') }}"></script>
+@endpush

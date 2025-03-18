@@ -67,11 +67,23 @@
                                     </form>
                                 </div>
                                 <div class="col-2">
-                                    <button
-                                        type="button"
-                                        class="btn btn-success btn-sm">
-                                        <i class="bi bi-check"></i>
-                                    </button>
+                                    <form action="{{ route('updateStatus', ['taskid' => $task->id]) }}" enctype="multipart/form-data" method="POST">
+                                        @csrf
+                                        @method('PUT')
+                                        @if($task->status == 'in-progress')
+                                        <button
+                                            type="submit"
+                                            class="btn btn-success btn-sm">
+                                            <i class="bi bi-check"></i>
+                                        </button>
+                                        @else
+                                        <button
+                                            type="submit"
+                                            class="btn btn-outline-info btn-sm">
+                                            <i class="bi bi-question"></i>
+                                        </button>
+                                        @endif
+                                    </form>
                                 </div>
                             </div>
                         </td>

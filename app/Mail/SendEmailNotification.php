@@ -23,9 +23,9 @@ class SendEmailNotification extends Mailable
      */
     public function __construct($data)
     {
-        $this->title = $data['title'];
+        $this->title = $data['title'] ?? '';
 
-        $this->message = $data['description'];
+        $this->message = $data['description'] ?? '';
     }
 
     /**

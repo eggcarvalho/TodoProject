@@ -9,4 +9,9 @@ class Responsible extends Model
 {
     /** @use HasFactory<\Database\Factories\ResponsibleFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'function',
+    ];
 }

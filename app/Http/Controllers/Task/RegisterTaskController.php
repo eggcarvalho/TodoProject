@@ -12,7 +12,7 @@ class RegisterTaskController extends Controller
     {
 
         try {
-            (new RegisterTaskService($request))->generateTaskObject();
+            (new RegisterTaskService($request->all()))->generateTaskObject();
 
             return response()->json(data: [
                 'status' => true,

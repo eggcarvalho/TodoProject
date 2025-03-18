@@ -10,22 +10,22 @@ use App\Services\Task\GenerateTaskDataIA;
 
 class RegisterTaskService
 {
-    public function __construct(private Request $request) {}
+    public function __construct(private array $data) {}
 
-    public function generateTaskObject(): bool
+    public function generateTaskObject(): Task
     {
-        $data = $this->request->all();
+        $data = $this->data;
 
         $data =  $data['decideIA'] == 'true' ? $this->registerTaskIA() : $data;
 
 
         Mail::to('teste@gmail.com')->later(now()->addSeconds(30), new SendEmailNotification($data));
 
-        return Task::create($data) ? true : false;
+        return Task::create($data);
     }
 
     private function registerTaskIA(): array
     {
-        return (new GenerateTaskDataIA())->generateDataIA($this->request->all());
+        return (new GenerateTaskDataIA())->generateDataIA($this->data);
     }
 }

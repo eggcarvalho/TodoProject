@@ -21,8 +21,8 @@ Este projeto é um desafio técnico para criar um CRUD (Create, Read, Update, De
 
 -   **PHP 8.4 + Laravel 12**: Toda a lógica de negócio, controllers, models e rotas foram desenvolvidos utilizando o Laravel.
 -   **EloquentORM**: Utilizado para realizar as operações de CRUD no banco de dados PostgreSQL.
--   **Gemini IA**: Integrado para fornecer sugestões inteligentes de tarefas ou categorias com base no histórico do usuário.
--   **Mailpit**: Configurado para testar o envio de e-mails, como notificações de conclusão de tarefas.
+-   **Gemini IA**: Integrado para fornecer sugestões inteligentes de automáticas dos detalhes da tarefa (prioridade, descrição, passo à passo e etc).
+-   **Mailpit**: Configurado para testar o envio de e-mails, como notificações de criação de tarefas.
 -   **PHPUnit**: Testes unitários e de integração foram escritos para garantir a funcionalidade das features.
 
 ### Frontend

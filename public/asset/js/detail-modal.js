@@ -56,7 +56,7 @@ jQuery(function ($) {
     function getStatus(data) {
         switch (data) {
             case "in-progress":
-                return `<span class="badge bg-primary"><i class="bi bi-question"></i> Em Andamento</span> `;
+                return `<span class="badge bg-warning"><i class="bi bi-hourglass-split"></i> Em Andamento</span> `;
             case "to-do":
                 return `<span class="badge bg-danger"><i class="bi bi-question"></i> Para Fazer</span> `;
             default:

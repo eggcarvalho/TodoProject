@@ -14,10 +14,16 @@ class RegisterTaskController extends Controller
         try {
             (new RegisterTaskService($request))->generateTaskObject();
 
-            return redirect()->route('home')->with('success', 'Tarefa registrada com sucesso.');
+            return response()->json(data: [
+                'status' => true,
+                'message' => "Task alterada com sucesso.",
+            ]);
         } catch (\Exception $e) {
 
-            return back()->with('error', 'Ocorreu um erro ao registrar a tarefa.');
+            return response()->json([
+                'status' => false,
+                'message' => "Falha ao salvar a tarefa: " . $e->getMessage()
+            ], 500);
         }
     }
 }

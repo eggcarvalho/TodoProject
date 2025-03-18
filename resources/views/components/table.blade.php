@@ -70,17 +70,17 @@
                                     <form action="{{ route('updateStatus', ['taskid' => $task->id]) }}" enctype="multipart/form-data" method="POST">
                                         @csrf
                                         @method('PUT')
-                                        @if($task->status == 'in-progress')
+                                        @if($task->status !== 'done')
                                         <button
                                             type="submit"
-                                            class="btn btn-success btn-sm">
-                                            <i class="bi bi-check"></i>
+                                            class="btn btn-outline-warning btn-sm">
+                                            <i class="bi bi-hourglass-split text-warning"></i>
                                         </button>
                                         @else
                                         <button
                                             type="submit"
                                             class="btn btn-outline-info btn-sm">
-                                            <i class="bi bi-question"></i>
+                                            <i class="bi bi-check-circle-fill text-success"></i>
                                         </button>
                                         @endif
                                     </form>

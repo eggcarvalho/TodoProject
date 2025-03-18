@@ -147,3 +147,7 @@
         </div>
     </div>
 </div>
+
+@push('footer')
+<script src="{{ asset('asset/js/detail-modal.js') }}"></script>
+@endpush

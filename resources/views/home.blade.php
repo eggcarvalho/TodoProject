@@ -22,7 +22,8 @@
 
 <body>
     @include('modals.add')
-    @include('components.detail')
+    @include('modals.edit')
+    @include('modals.detail')
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center flex-column flex-wrap vh-100 gap-5">
             <div class="col-md-11">

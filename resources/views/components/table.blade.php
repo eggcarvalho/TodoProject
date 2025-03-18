@@ -50,8 +50,9 @@
                                 </div>
                                 <div class="col-2">
                                     <button
+                                        data-taskid="{{ $task->id }}"
                                         type="button"
-                                        class="btn btn-warning btn-sm">
+                                        class="btn btn-warning btn-sm see-edit">
                                         <i class="bi bi-pencil"></i>
                                     </button>
                                 </div>
@@ -104,8 +105,3 @@
         {{ $tasks->links('components.pagination') }}
     </div>
 </div>
-
-
-@push('footer')
-<script src="{{ asset('asset/js/detail-modal.js') }}"></script>
-@endpush

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class UpdateTaskService extends Services
 {
-    public function __construct(private Request $request, private int $taskid)
+    public function __construct(private array $data, private int $taskid)
     {
         $this->updateTask();
     }
@@ -17,6 +17,6 @@ class UpdateTaskService extends Services
     private function updateTask()
     {
 
-        Task::findOrFail($this->taskid)->update($this->request->all());
+        Task::findOrFail($this->taskid)->update($this->data);
     }
 }

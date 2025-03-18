@@ -13,7 +13,7 @@
         <div
             class="table-responsive overflow-y" style="max-height: 45vh;">
             <table
-                class="table table-striped table-hover" style="width: 99%">
+                class="table table-striped table-hover" style="width: 99.6%">
                 <thead>
                     <tr>
                         <th scope="col">Número</th>
@@ -40,21 +40,21 @@
                         </td>
                         <td>
                             <div class="row">
-                                <div class="col-3">
+                                <div class="col-2">
                                     <button
                                         type="button"
                                         class="btn btn-primary btn-sm">
                                         <i class="bi bi-eye"></i>
                                     </button>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <button
                                         type="button"
                                         class="btn btn-warning btn-sm">
                                         <i class="bi bi-pencil"></i>
                                     </button>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <form onsubmit="return confirm('Deseja remover esta tarefa?')" action="{{ route('delete', ['taskid' => $task->id]) }}" enctype="multipart/form-data" method="POST">
                                         @csrf
                                         @method('DELETE')
@@ -65,7 +65,7 @@
                                         </button>
                                     </form>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-2">
                                     <button
                                         type="button"
                                         class="btn btn-success btn-sm">

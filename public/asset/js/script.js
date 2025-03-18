@@ -36,9 +36,13 @@ jQuery(function ($) {
     $(".submitButton").on("click", function () {
         if (actualStep === 3 && !validateStep(actualStep)) return false;
 
-        chooseStep(4);
-
-        submitForm();
+        $(".step:visible").fadeOut("fast", function () {
+            $(".step4").fadeIn("fast", function () {
+                $(".add-footer").slideUp("fast", function () {
+                    submitForm();
+                });
+            });
+        });
     });
 
     let addTask = document.getElementById("addTask");
@@ -54,9 +58,6 @@ jQuery(function ($) {
         actualStep = step;
 
         $(".step:visible").fadeOut("fast", function () {
-            if (step === 4) {
-                $(".add-footer").slideUp("fast");
-            }
             $(".step" + step).fadeIn("fast");
         });
 

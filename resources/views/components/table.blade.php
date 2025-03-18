@@ -90,7 +90,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             Não há tarefas cadastradas no sistema.
                         </td>
                     </tr>
@@ -99,6 +99,9 @@
             </table>
         </div>
 
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        {{ $tasks->links('components.pagination') }}
     </div>
 </div>
 

@@ -15,7 +15,7 @@
                         type="number"
                         class="form-control"
                         name="numero"
-                        placeholder="" />
+                        value="{{ $queries['id'] }}" />
                 </div>
             </div>
             <div class="row">
@@ -27,7 +27,7 @@
                         type="text"
                         class="form-control"
                         name="titulo"
-                        placeholder="" />
+                        value="{{ $queries['title'] }}" />
                 </div>
             </div>
             <div class="row">
@@ -42,7 +42,7 @@
                                 name="resp">
                                 <option disabled selected value="">Selecionar</option>
                                 @forelse ($responsibles as $responsible)
-                                <option value="{{ $responsible->id }}">{{ $responsible->name . ' | ' . $responsible->function }}</option>
+                                <option value="{{ $responsible->id }}" {{ $queries['responsible_id'] == $responsible->id ? 'selected': '' }}>{{ $responsible->name . ' | ' . $responsible->function }}</option>
                                 @empty
                                 <option disabled>Nenhum responsável cadastrado</option>
                                 @endforelse
@@ -59,8 +59,9 @@
                             <select
                                 class="form-select"
                                 name="status">
-                                <option selected>Em Andamento</option>
-                                <option selected>Concluido</option>
+                                <option disabled selected value="">Selecionar</option>
+                                <option {{ $queries['status'] == 'in-progress' ? 'selected': '' }} value="in-progress">Em Andamento</option>
+                                <option {{ $queries['status'] == 'done' ? 'selected': '' }} value="done">Concluido</option>
                             </select>
 
                         </div>

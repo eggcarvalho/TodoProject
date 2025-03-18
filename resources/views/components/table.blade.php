@@ -79,7 +79,7 @@
                                         @else
                                         <button
                                             type="submit"
-                                            class="btn btn-outline-info btn-sm">
+                                            class="btn btn-outline-success btn-sm">
                                             <i class="bi bi-check-circle-fill text-success"></i>
                                         </button>
                                         @endif

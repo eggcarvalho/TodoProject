@@ -79,7 +79,13 @@ Execute o seguinte comando para subir os containers:
     docker exec -it todo-list-app php artisan migrate
     ```
 
-7.  Acesse a aplicação:
+7.  **Execute as seeders**:
+
+    ```bash
+    docker exec -it todo-list-app php artisan db:seed
+    ```
+
+8.  Acesse a aplicação:
 
 Abra o navegador e acesse http://localhost.
 

@@ -53,15 +53,15 @@ Certifique-se de ter o Docker e Docker Compose instalados.
 
 Execute o seguinte comando para subir os containers:
 
-    ```bash
+```bash
     docker-compose up -d
-    ```
+```
 
 3.  **Instale as dependências do PHP**:
 
-        ```bash
-        docker exec -it todo-list-app composer install
-        ```
+    ```bash
+    docker exec -it todo-list-app composer install
+    ```
 
 4.  **Configure o ambiente**:
 
@@ -69,15 +69,15 @@ Execute o seguinte comando para subir os containers:
 
 5.  **Gere a chave do Laravel**:
 
-        ```bash
-        docker exec -it todo-list-app php artisan key:generate
-        ```
+    ```bash
+    docker exec -it todo-list-app php artisan key:generate
+    ```
 
 6.  **Execute as migrations**:
 
-        ```bash
-        docker exec -it todo-list-app php artisan migrate
-        ```
+    ```bash
+    docker exec -it todo-list-app php artisan migrate
+    ```
 
 7.  Acesse a aplicação:
 

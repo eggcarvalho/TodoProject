@@ -11,7 +11,7 @@ class UpdateTaskController extends Controller
     public function index(Request $request, $taskid)
     {
         try {
-            new UpdateTaskService($request, $taskid);
+            new UpdateTaskService($request->all(), $taskid);
 
             return response()->json(data: [
                 'status' => true,

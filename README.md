@@ -93,6 +93,6 @@ Abra o navegador e acesse http://localhost.
 
 Para executar os testes com PHPUnit:
 
-    ```bash
-    docker exec -it todo-list-app php artisan test
-    ```
+```bash
+docker exec -it todo-list-app php artisan test
+```
